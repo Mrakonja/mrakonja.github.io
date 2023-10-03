@@ -1,149 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="wilih=device-wilih, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title> Mladen Milosavljevic CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    .wrapper {
+      width: 600px;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+    }
+
+    h1 {
+      color: #332d2d;
+      font-family: Montserrat;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+
+    .roundedDiv {
+      width: 14px; /* Twice the radius for a circular shape */
+      height: 14px; /* Twice the radius for a circular shape */
+      background-color: white; /* White background color */
+      border-radius: 50%; /* 50% border-radius creates a circle */
+      display: inline-block;
+      margin-bottom: 0px;
+    }
+
+    .header {
+      background-color: white;
+      height: 197px;
+      background-image: url("./img/header.png");
+      background-size: 600px;
+      background-repeat: no-repeat;
+    }
+
+    .header img:nth-child(1) {
+      position: absolute;
+      left: 30px;
+      top: 26px;
+    }
+
+    .header img:nth-child(2) {
+      position: absolute;
+      right: 30px;
+      top: 40px;
+    }
+
+    .callToAction {
+      padding-right: 52px;
+      padding-left: 48px;
+    }
+
+    .callToAction p {
+      width: 500px;
+      color: #332d2d;
+      font-family: Montserrat, serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .bigText {
+      padding-right: 52px;
+      padding-left: 48px;
+    }
+
+    .bigText h1 {
+      text-align: center;
+      width: 518px;
+    }
+
+    .points {
+      background-image: url("./img/middle.png");
+      height: 510px;
+      background-repeat: no-repeat;
+      background-size: 600px;
+      padding-right: 14px;
+      padding-top: 110px;
+      text-align: right;
+    }
+
+    ul {
+      list-style: none;
+      width: 300px;
+      position: absolute;
+      right: 0;
+    }
+
+    ul > li {
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: capitalize;
+      text-align: right;
+
+    }
+
+    li p {
+      color: white;
+    }
+
+    .points img {
+      margin-left: 5px;
+    }
+
+    .points p {
+      text-align: right;
+      color: #fff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-right: 18px;
+    }
+
+    .dateContainer {
+      background-image: url("./img/bottom.png");
+      height: 400px;
+      background-repeat: no-repeat;
+      background-size: 600px;
+      padding-top: 30px;
+      padding-left: 20px;
+    }
+
+    .dateContainer .roundedDiv {
+      margin: 12px 0;
+      box-shadow: #332d2d 3px 3px;
+    }
+
+    .date {
+      text-align: center;
+      width: 150px;
+    }
+
+    .date p {
+      color: #ffffff;
+      font-size: 37px;
+      text-shadow: #332d2d 3px 3px;
+      margin: 0;
+      font-weight: bolder;
+    }
+
+    .footer {
+      margin-top: 5px;
+      border-top: #332d2d 7px solid;
+    }
+
+
+    .topFooter {
+      background-color: #cd2026;
+      height: 55px;
+      padding: 18px 0px;
+      margin: 0 auto;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .topFooter img {
+      height: 22px;
+    }
+
+    .topFooter img:nth-child(1) {
+      margin-right: 35px;
+    }
+
+    .topFooter div {
+      display: inline-block;
+    }
+
+    .bottomFooter {
+      background-color: #332d2d;
+      height: 45px;
+      padding: 16px 0px;
+      margin: 0 auto;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .bottomFooter div {
+      display: inline-block;
+    }
+
+    .bottomFooter img {
+      height: 15px;
+    }
+
+    .bottomFooter a:nth-child(2) {
+      margin: 0 34px;
+    }
+  </style>
 </head>
+
 <body>
-<div id='wrapper'>
-    <aside class='borderRight borderGold'>
-        <div class='info'>
-        <div id="img">
-            <img class="borderGold border1px" src="./profilna.jpg" height="120" wilih="auto" alt="">
-             </div>
-        <div id="info">
-            
-            <ul>
-                <h3>Personal Info</h3>
-                <div class='breakLine short'></div>
-                <li>First Name: Mladen</li>                
-                <li>Last Name: Milosavljvic</li>
-                <li>Year of birth: 1987</li>
-                <li>Location: Kruševac</li>
-                <li>Hobbies:Running, Sudoku</li>          
-            </ul>
-        </div>
+<div class="wrapper">
+  <div class="header">
+    <img src="./img/grafimaMali.png" />
+    <img src="./img/rcbBeli.png" />
+  </div>
+  <div class="callToAction">
+    <h1>Poštovani</h1>
+    <p>
+      Sa zadovoljstvom Vas pozivamo da nas posetite na štandovima 4001 i
+      4015 na Beogradskom sajmu u okviru manifestacije ''Grafima'' od
+      <b>9. do 11. oktobra.</b>
+    </p>
+  </div>
 
-  
-        <div class="infoBox">
-            <ul>
-                <h3>Skill set </h3>
-                <div class='breakLine short'></div>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>C</li>
-                <li>Git</li>
-                <li>AWS</li>
-                <li>Linux</li>
-                <li>English</li>
-            </ul>
- 
-        <div class="infoBox">
-            <ul>
-                <h3>Social Networks</h3>
-                <div class='breakLine short'></div>
-                <li>github</li>
-                <li>codepen</li>
-                <li>linkedin</li>
-                <li>freelancer</li>
-                <li>stackoverlow</li>
-            </ul>
-        </div>
+  <div class="points">
+
+
+  </div>
+
+  <div class="bigText">
+    <h1>
+      Dođite da se družimo, razmenimo iskustva, prodiskutujemo probleme i
+      nađemo rešenja!
+    </h1>
+  </div>
+
+  <div class="dateContainer">
+    <div class="date">
+      <p>9 okt</p>
+      <div class="roundedDiv"></div>
+      <p>11 okt</p>
     </div>
-
-
-
-   
-
-
-    </aside>
-    <main>
-            <div>
-            <h2>Radno iskustvo</h2>
-            <ul>
-                <li>Kazino olimp 
-                    <p>krupije 2007-2010</p>
-                </li>
-                <li>Tradicija i vi
-                    <p>Porodicna preduzetnicke radnje za proizvodnju hrane</p> </li>
-                    
-            
-                <li>MD International</li>
-                    <p>
-                        <p> Merchendajzer</p>
-                        <p> Komercijalista</p>
-                    </p>
-            
-                <li>"Udruzenje frilensera i preduzetnika Srbije"
-                    <p>predsednik i osnivac udruzenja</p>
-                </li>
-                
-             
-                <li>"udruzenje Preduzetnika i Privrednika Srbije"
-                    <p>deo IT tima</p>
-                </li>
-                  
-            </dl>
-   
-            <h2>Obrazovanje</h2>
-            <ul>
-                <li>Gimnazija krusevac, prirodno matematicki smer</li>
-            </ul>
-   
-            <h2>Kursevi</h2>
-            <ul>
-                <li>Free Code camp <span>Responsive Web design</span></li>
-                <li>Free Code camp <span>Javascript Algorithms and DataStructure</span> </li>
-                <li>Free Code camp <span>Frontend Libaries </span></li>
-                <li>Free Code camp <span>Data Visualisation </span></li>
-                <li>Udemy - <span>React the complete Guide(hooks, react router, redux)</span> </li>
-                <li>Udemy - <span>Python GUI programming, recipes using PyQt5</span> </li>
-                <li>Udemy - <span>Python for datascience and machine learning bootcamp </span></li>
-            </ul>
-        </div>
-        <div>
-            <h2>Lične osobine</h2>
-            <ul>
-                <li>Ambiciozan</li>
-                <li>Vredan</li>
-                <li>Istrajan</li>
-                <li>Komunikativan</li>
-                <li>Dobar u timskom radu</li>
-            </ul>
- 
-
-            <h2>Tehnologije</h2>
-            <ul>
-                <li>JavaScript
-                  
-                        <p>ReactJS</p>
-                        <p>React Native</p>
-                        <p>NodeJS</p>
-                        <p>ExpressJS</p>
-                        <p>D3.js</p>
-                
-                </li>
-
-                <li> Python
-                
-                        <p>Django</p>
-                        <p>Flask</p>
-                        <p>Beautiful Soup</p>
-                        <p>Selenium</p>
-                        <p>Scrapy</p>
-                    
-                </li>
-
-                <li>html</li>
-                <li>css,sass,less</li>
-                <li>Git</li>
-                <li>AWS</li>
-            </ul>
-        </div>
-
-    </main>
+  </div>
+  <div class="footer">
+    <div class="topFooter">
+      <div>
+        <img src="./img/sajamlogo.png" />
+        <img src="./img/grafimaLogo.png" />
+      </div>
+    </div>
+    <div class="bottomFooter">
+      <div>
+        <a href="https://www.facebook.com/grafikum.rs" target="_blank"
+        ><img src="./img/facebookLogo.png"
+        /></a>
+        <a href="https://www.instagram.com/grafikum.rs/" target="_blank"
+        ><img src="./img/instagramLogo.png"
+        /></a>
+        <a href="https://www.linkedin.com/company/grafikum/" target="_blank"
+        ><img src="./img/likedInLogo.png"
+        /></a>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
